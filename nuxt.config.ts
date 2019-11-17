@@ -23,6 +23,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@/assets/css/reset.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -35,6 +36,7 @@ module.exports = {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
+    '@nuxt/typescript-build'
   ],
   /*
   ** Nuxt.js modules
@@ -56,7 +58,11 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
-    }
+    // extend (config, ctx) {
+    // }
+  },
+  typescript: {
+    typeCheck: true,
+    ignoreNotFoundWarnings: true
   }
 }
