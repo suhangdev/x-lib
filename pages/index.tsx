@@ -1,9 +1,17 @@
 import { Component, Vue } from 'vue-property-decorator'
-@Component({})
+import content from './content'
+import './index.module.less'
+@Component({
+    components: {
+        content,
+    }
+})
 export default class Index extends Vue {
     render() {
         return (
-            <h1>1234</h1>
+            <div class="index">
+                <nuxt-link to="/content">start</nuxt-link>
+            </div>
         )
     }
 }
