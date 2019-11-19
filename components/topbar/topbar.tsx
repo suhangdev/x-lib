@@ -5,7 +5,8 @@ export default class Topbar extends Vue {
     render() {
         return (
             <div class="topbar">
-                topbar
+                <span>topbar</span>
+                <span>github</span>
             </div>
         )
     }

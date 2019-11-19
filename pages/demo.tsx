@@ -1,11 +1,11 @@
 import { Component, Vue } from 'vue-property-decorator'
-import './index.module.less'
+import './demo.module.less'
 @Component({})
-export default class Comp extends Vue {
+export default class Demo extends Vue {
     render() {
         return (
-            <div class="content">
-                _component
+            <div class="demo">
+                <nuxt-child/>
             </div>
         )
     }

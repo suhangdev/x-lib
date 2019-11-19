@@ -3,21 +3,26 @@ import sidebar from '../components/sidebar/sidebar'
 import topbar from '../components/topbar/topbar'
 import preview from '../components/preview/preview'
 
-import './content.module.less'
+import './home.module.less'
 
 @Component({
     components: {
         sidebar,
         topbar,
         preview
+    },
+    asyncData(context) {
+        console.log(context)
+        return {
+        }
     }
 })
-export default class Content extends Vue {
+export default class Home extends Vue {
     render() {
         return (
-            <div class="content">
+            <div class="home">
                 <topbar></topbar>
-                <div class="content-container">
+                <div class="home-container">
                     <sidebar></sidebar>
                     <nuxt-child/>
                     <preview></preview>
