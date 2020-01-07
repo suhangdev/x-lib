@@ -1,6 +1,6 @@
 # xlib
 
-> Introduction to the component library and demo.
+> My luminous Nuxt.js project
 
 ## Build Setup
 

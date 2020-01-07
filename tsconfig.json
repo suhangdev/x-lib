@@ -1,43 +1,35 @@
 {
     "compilerOptions": {
-        "target": "esnext",
-        "module": "esnext",
-        "strict": true,
-        "jsx": "preserve",
-        "importHelpers": true,
-        "moduleResolution": "node",
-        "experimentalDecorators": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "sourceMap": true,
-        "baseUrl": "./",
-        "types": [
-            "webpack-env"
+      "target": "esnext",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": [
+        "esnext",
+        "esnext.asynciterable",
+        "dom"
+      ],
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "jsx": "preserve",
+      "allowJs": true,
+      "sourceMap": true,
+      "strict": true,
+      "noEmit": true,
+      "baseUrl": ".",
+      "paths": {
+        "~/*": [
+          "./*"
         ],
-        "paths": {
-            "*": [
-                "types/*"
-            ],
-            "types/*": [
-                "types/*"
-            ],
-            "@/*": [
-                "./*"
-            ]
-        },
-        "lib": [
-            "esnext",
-            "dom",
-            "dom.iterable",
-            "scripthost"
+        "@/*": [
+          "./*"
         ]
+      },
+      "types": [
+        "@types/node",
+        "@nuxt/types"
+      ]
     },
-    "include": [
-        "pages/**/*.ts",
-        "pages/**/*.vue",
-        "pages/**/*.tsx"
-    ],
     "exclude": [
-        "node_modules"
+      "node_modules"
     ]
-}
+  }
