@@ -1,6 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator'
 import './preview.module.less'
-import { Context } from '@nuxt/types'
 
 @Component({
 })
@@ -12,7 +11,6 @@ export default class Preview extends Vue {
                     class="preview-iframe"
                     src={this.getIframeSrc()}
                     width="375"
-                    height="812"
                     frameborder="0"
                 >
                 </iframe>

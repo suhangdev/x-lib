@@ -21,6 +21,9 @@ async function start () {
     await nuxt.ready()
   }
 
+  app.get('/api', function (req: any, res: any) {
+    res.send('Hello World!')
+  })
   // Give nuxt middleware to express
   app.use(nuxt.render)
 

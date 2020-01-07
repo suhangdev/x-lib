@@ -11,11 +11,16 @@ import './home.module.less'
         topbar,
         preview
     },
-    asyncData(context) {
-        console.log(context)
+    async asyncData(context: any) {
+        // context.$axios.get('/api').then((res: any) => {
+        //     console.log(res)
+        // })
+        // if (process.server) {
+        //     console.log('hi')
+        // }
         return {
         }
-    }
+    }   
 })
 export default class Home extends Vue {
     render() {

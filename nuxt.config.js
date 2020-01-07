@@ -1,5 +1,5 @@
 
-module.exports = {
+export default {
   mode: 'universal',
   /*
   ** Headers of the page
@@ -29,29 +29,21 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/router'
+    '@/plugins/router',
+    '@/plugins/axios'
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    // '@nuxtjs/eslint-module'
     '@nuxt/typescript-build'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
-  },
   /*
   ** Build configuration
   */
@@ -59,8 +51,8 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    // extend (config, ctx) {
-    // }
+    extend (config, ctx) {
+    }
   },
   typescript: {
     typeCheck: true,
